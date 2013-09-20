@@ -216,6 +216,16 @@ AddDefaultCharset utf-8
   # RewriteBase /
 </IfModule>
 
+
+# ------------------------------------------------------------------------------
+# | Remove .php extension from file names                                      |
+# ------------------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+
 # ------------------------------------------------------------------------------
 # | Suppressing / Forcing the "www." at the beginning of URLs                  |
 # ------------------------------------------------------------------------------
