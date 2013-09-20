@@ -23,10 +23,6 @@
             print "
                 <link href=\"/css/compiled/00-normalize.css\" rel=\"stylesheet\" />
                 <link href=\"/css/compiled/01-main.css\" rel=\"stylesheet\" />
-                
-                <script src=\"js/vendor/modernizr-2.6.2.min.js\"></script>
-                <script src=\"js/main.js\"></script>
-                <script src=\"js/plugin.js\"></script>
             ";
         }
     ?>
@@ -43,7 +39,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <p>Hello world! This is the AJCW HTML5 Boilerplate.</p>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -69,7 +65,7 @@
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+        ga('create','UA-512906-1');ga('send','pageview');
     </script>
 </body>
 </html>
