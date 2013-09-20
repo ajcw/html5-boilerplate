@@ -7,5 +7,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, Less, CSS3, PHP
     Normalize.css, jQuery, Modernizr
