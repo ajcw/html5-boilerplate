@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title><?php echo $pageTitle; ?></title>
 
     <?php
         // Detect if this is the local dev site, or live site
