@@ -15,14 +15,17 @@
         // If live, used minifed CSS (from http://code.google.com/p/minify/)
         if (($current_url != "local") && ($current_url != "ajcw")) {
             print "
-                <link type=\"text/css\" rel=\"stylesheet\" href=\"/min/b=css&amp;f=compiled/00-normalize.css,compiled/01-main.css\" />
+                <link type=\"text/css\" rel=\"stylesheet\" href=\"/min/b=css&amp;f=compiled/00-normalize.css,compiled/01-core.css,compiled/02-layout.css,compiled/03-header.css,compiled/04-footer.css\" />
            ";
         }
         // Otherwise use individual files - remember to add/remove CSS files from both positions
         else {
             print "
                 <link href=\"/css/compiled/00-normalize.css\" rel=\"stylesheet\" />
-                <link href=\"/css/compiled/01-main.css\" rel=\"stylesheet\" />
+                <link href=\"/css/compiled/01-core.css\" rel=\"stylesheet\" />
+                <link href=\"/css/compiled/02-layout.css\" rel=\"stylesheet\" />
+                <link href=\"/css/compiled/03-header.css\" rel=\"stylesheet\" />
+                <link href=\"/css/compiled/04-footer.css\" rel=\"stylesheet\" />
             ";
         }
     ?>

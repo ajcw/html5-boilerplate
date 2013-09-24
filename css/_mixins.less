@@ -1,0 +1,14 @@
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+.columns(@column-count, @column-gap) {
+	-moz-column-count: @column-count;
+	-moz-column-gap: @column-gap;
+	-webkit-column-count: @column-count;
+	-webkit-column-gap: @column-gap;
+	column-count: @column-count;
+	column-gap: @column-gap;
+}
