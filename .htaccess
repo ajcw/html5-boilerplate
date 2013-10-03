@@ -5,7 +5,7 @@
 # to the main server config file (usually called `httpd.conf`), you should add
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
-DirectoryIndex index.php maintenance.htm
+DirectoryIndex index.php _maintenance.htm
 
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
