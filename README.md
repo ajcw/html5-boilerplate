@@ -24,4 +24,4 @@ The following differences exist with the main project:
 
 - Using PHP
 - Less preprocessor used to generate the CSS
-- CSS and JS is merged and minified with the PHP Minifier
+- CSS and JS is merged and minified with Grunt
