@@ -1,18 +1,17 @@
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <?php
 
-        if (($current_url != "local") && ($current_url != "ajcw")) {
-            print "
-                <script type=\"text/javascript\" src=\"/min/b=js&amp;f=js/vendor/modernizr-2.6.2.min.js\"></script>
-           ";
+        if ($env === 'live') {
+            print '
+                <script type="text/javascript" src="/js/compiled/all.min.js"></script>
+           ';
         }
-        // If not live use individual files - remember to add/remove JS files from both positions
+        
         else {
-            print "
-                <script src=\"js/main.js\"></script>
-                <script src=\"js/plugin.js\"></script>
-            ";
+            print '
+                <script src="js/lib/jquery-1-10.2.js"></script>
+                <script src="js/main.js"></script>
+                <script src="js/plugin.js"></script>
+            ';
         }
     ?>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
