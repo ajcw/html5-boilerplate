@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			all: {
-				files: ['**/*.less', '**/*.js'],
+				files: ['**/*.less', '**/*.js', '!js/compiled/*.js'],
 				tasks: ['less', 'cssmin', 'concat', 'uglify']
 			}
 		}
@@ -59,6 +59,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
+	grunt.registerTask('dev', ['less', 'cssmin', 'concat', 'uglify', 'watch']);
 	grunt.registerTask('default', ['less', 'cssmin', 'concat', 'uglify']);
 
 };
