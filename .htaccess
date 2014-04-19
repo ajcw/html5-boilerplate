@@ -8,3 +8,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteCond %{HTTP_REFERER} !^$  
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?example.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(development\.)?example.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(ajcw\.)?example.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ http://www.example.com/img/hotlink.png [NC,R,L] 
