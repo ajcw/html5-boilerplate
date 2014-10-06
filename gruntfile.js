@@ -3,7 +3,14 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		less: {
+		copy: {
+            htaccess: {
+                files: [ 
+                    {src: ['.htaccess'], dest: 'maintenance/normal/'}
+                ]
+            }
+        },
+ 		less: {
 			local: {
 			    files: [
         			{
@@ -73,6 +80,24 @@ module.exports = function(grunt) {
 				src: 'C:/\Users/\John Catterfeld/\Dropbox/\Websites/\html5-boilerplate',
 				dest: '/public_html/'
 			},
+	        'live-maintenance-mode': {
+				auth: {
+					host: 'example.com',
+					port: 21,
+					authKey: 'accountName'
+				},
+    			src: 'C:/\Users/\John Catterfeld/\Dropbox/\Websites/\html5-boilerplate/maintenance/in-maintenance/',
+				dest: '/public_html/'
+			},
+	        'live-maintenance-reset': {
+				auth: {
+					host: 'example.com',
+					port: 21,
+					authKey: 'accountName'
+				},
+    			src: 'C:/\Users/\John Catterfeld/\Dropbox/\Websites/\html5-boilerplate/maintenance/normal/',
+				dest: '/public_html/'
+			},
 	        dev: {
 				auth: {
 					host: 'example.com',
@@ -93,6 +118,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-less');
@@ -106,5 +132,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['csslint', 'jslint']);
 	grunt.registerTask('push', ['shell:git-push']);
 	grunt.registerTask('deploy-dev', ['default', 'lint', 'clean', 'ftp-deploy:dev']);
-	grunt.registerTask('deploy-live', ['default', 'lint', 'clean', 'shell:git-push', 'ftp-deploy:live']);
+	grunt.registerTask('deploy-live', ['default', 'lint', 'clean', 'copy:htaccess', 'ftp-deploy:live-maintenance-mode', 'ftp-deploy:live', 'ftp-deploy:live-maintenance-reset']);
 }
