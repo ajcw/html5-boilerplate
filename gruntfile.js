@@ -59,9 +59,9 @@ module.exports = function(grunt) {
 			},
 			src: ['css/compiled/all.css']
 		},
-		jshint: {
-			all: ['**/*.js', '!js/all.min.js']
-		},
+		// jshint: {
+		// 	all: ['**/*.js', '!js/all.min.js']
+		// },
 		clean: ['css/compiled', 'js/compiled'],
 		watch: {
 			all: {
@@ -121,6 +121,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	// grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -129,7 +130,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['less', 'cssmin', 'concat', 'uglify']);
 	grunt.registerTask('dev', ['default', 'clean', 'watch']);
-	grunt.registerTask('lint', ['csslint', 'jslint']);
+	// grunt.registerTask('lint', ['csslint', 'jslint']);
+	grunt.registerTask('lint', ['csslint']);
 	grunt.registerTask('push', ['shell:git-push']);
 	grunt.registerTask('deploy-dev', ['default', 'lint', 'clean', 'ftp-deploy:dev']);
 	grunt.registerTask('deploy-live', ['default', 'lint', 'clean', 'copy:htaccess', 'ftp-deploy:live-maintenance-mode', 'ftp-deploy:live', 'ftp-deploy:live-maintenance-reset']);
