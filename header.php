@@ -22,8 +22,9 @@
                 <link href="/css/compiled/00-normalize.css" rel="stylesheet" />
                 <link href="/css/compiled/01-core.css" rel="stylesheet" />
                 <link href="/css/compiled/02-layout.css" rel="stylesheet" />
-                <link href="/css/compiled/03-header.css" rel="stylesheet" />
-                <link href="/css/compiled/04-footer.css" rel="stylesheet" />
+                <link href="/css/compiled/03-typography.css" rel="stylesheet" />
+                <link href="/css/compiled/04-header.css" rel="stylesheet" />
+                <link href="/css/compiled/05-footer.css" rel="stylesheet" />
             ';
         }
     ?>
