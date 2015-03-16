@@ -1,3 +1,6 @@
 node_modules
 maintenance/normal/
+all.min.css
 css/compiled/*.css
+js/compiled/*.js
+npm-debug.log

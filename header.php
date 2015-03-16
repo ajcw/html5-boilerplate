@@ -13,7 +13,7 @@
         // If live, used minifed CSS (from http://code.google.com/p/minify/)
         if ($env === 'live') {
             print '
-                <link type="text/css" rel="stylesheet" href="/css/compiled/all.min.css" />
+                <link type="text/css" rel="stylesheet" href="/css/all.min.css" />
            ';
         }
         // Otherwise use individual files - remember to add/remove CSS files from both positions
