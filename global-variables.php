@@ -7,4 +7,11 @@
 	else {
 		$env = 'live';
 	}
+
+	// Returns the current page with no query string or .php extension
+	function currentBasePage() {
+		$file = $_SERVER['PHP_SELF'];
+		$info = pathinfo($file);
+		return basename($file,'.'.$info['extension']);
+	}	
 ?>
