@@ -10,18 +10,18 @@
 				['page4','Page 4']
 			);
 
-			foreach ($pages as &$pages) {
+			foreach ($pages as $url => $link_name) {
 
-				if ($pages[0] === currentBasePage()) {
+				if ($url === currentBasePage()) {
 					$linkClass = 'nav-link current';
 				}
 				else {
 					$linkClass = 'nav-link';
 				}
 
-				echo '<li class="'.$linkClass.'"><a href="'.$pages[0].'">'.$pages[1].'</a></li>';
+				echo '<li class="'.$linkClass.'"><a href="'.$url.'">'.$link_name.'</a></li>';
 				
-			}
+			};
 
 		?>
 	</ul>
