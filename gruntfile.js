@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 					port: 21,
 					authKey: 'accountName'
 				},
-    			exclusions: ['node_modules', '.git*', 'gruntfile.js', '.ftppass', '.csslintrc', '.jshintrc', 'package.json', '*.less', 'js/lib', 'web.config'],
+    			exclusions: ['node_modules', '.git*', 'gruntfile.js', '.ftppass', '.csslintrc', '.jshintrc', 'package.json', '*.less', 'js/lib', 'web.config', '*.log'],
 				src: 'C:/\Users/\John Catterfeld/\Dropbox/\Websites/\html5-boilerplate',
 				dest: '/public_html/'
 			},
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 					port: 21,
 					authKey: 'accountName'
 				},
-    			exclusions: ['node_modules', '.git*', 'gruntfile.js', '.ftppass', '.csslintrc', '.jshintrc', 'package.json', '*.less', 'js/lib', 'web.config'],
+    			exclusions: ['node_modules', '.git*', 'gruntfile.js', '.ftppass', '.csslintrc', '.jshintrc', 'package.json', '*.less', 'js/lib', 'web.config', '*.log'],
 				src: 'C:/\Users/\John Catterfeld/\Dropbox/\Websites/\html5-boilerplate',
 				dest: '/development/'
 			}
